@@ -14,10 +14,10 @@
     <!-- Menu principal -->
     <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
   🍔
-</button>
+</button><!--  2: La page ne défile pas tant que le menu popover est ouvert -->
 
 
-    <nav class="menu" id="menu" popover aria-label="Main menu">
+    <nav class="menu" id="menu" popover aria-label="Main menu"><!-- 1: Ce bouton ouvre ou ferme le menu grâce à l'attribut popovertarget  -->
 <button
   class="menu__close burger burger--close"
   type="button"
@@ -25,8 +25,7 @@
   popovertargetaction="hide"
   aria-label="Close the menu"
   autofocus
-></button>
-
+></button><!--  3: Ce bouton ferme le menu grâce à l'attribut popovertarget  -->
 
       <ul class="menu__list">
         <li class="menu__item"><a class="menu__link" href="#">Item de menu un</a></li>

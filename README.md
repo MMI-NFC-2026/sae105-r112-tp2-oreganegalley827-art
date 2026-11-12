@@ -191,8 +191,16 @@ L'usage de la virgule permet de regrouper deux sélecteurs pour la même règle 
 
 Ajouter à votre code des commentaires reprenant les explications données dans ce fichier.
 
-- HTML : `<!-- içi le commentaire -->`
-- CSS : `/* ici le commentaire */`
+- HTML : 1: Ce bouton ouvre ou ferme le menu grâce à l'attribut popovertarget
+2: Le menu est un popover : il est caché par défaut et s'ouvre avec le bouton.
+3: Ce bouton ferme le menu. autofocus y place le focus quand le menu s'ouvre.
+
+- CSS : 1: Le menu occupe toute la page et n'a pas de bordure.
+2: La page ne défile pas tant que le menu popover est ouvert
+3: Le curseur indique que le bouton hamburger est cliquable.
+4:Le menu devient progressivement visible à l'ouverture.
+5: Le bouton de fermeture tourne lorsque le menu est ouvert.
+6:Les transitions sont désactivées si l'utilisateur préfère réduire les animations.
 
 Recherchez sur le site https://developer.mozilla.org/fr/ les pages de documentation de ce qui a été utilisé dans ce TP :
 
