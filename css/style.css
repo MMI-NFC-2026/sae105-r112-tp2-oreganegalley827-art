@@ -37,9 +37,8 @@ html:has(.menu:popover-open) {
   transform: rotate(90deg);
   transition: 400ms; /*  5: Animation de rotation pour le bouton de fermeture */
 }
-@media (prefers-reduced-motion: reduce) {
   .menu,
   .menu .burger--close {
     transition: none;
   }
-}/*  6: Réduction des animations pour les utilisateurs qui en font usage */
+/*  6: Réduction des animations pour les utilisateurs qui en font usage */
