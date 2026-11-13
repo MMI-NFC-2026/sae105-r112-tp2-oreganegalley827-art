@@ -4,13 +4,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test de menu</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Accueil | TP liens relatifs</title>
+  <!-- Lien relatif : depuis ce fichier vers src/css/styles.css -->
+  <link rel="stylesheet" href="src/css/styles.css">
 </head>
 
 <body>
-  <div class="layout">
-    <nav>
+  <header class="header">
+    <!-- 1: Ce bouton ouvre ou ferme le menu grâce à l'attribut popovertarget -->
+    <button class="burger" type="button" popovertarget="menu" aria-label="Menu">🍔</button>
+
+    <!-- 2: Le menu est un popover : il est caché par défaut et s'ouvre avec le bouton. -->
+    <nav class="menu" id="menu" popover aria-label="Menu principal">
+      <!-- 3: Ce bouton ferme le menu. autofocus y place le focus quand le menu s'ouvre. -->
+      <button class="menu__close burger burger--close" type="button" popovertarget="menu"
+        popovertargetaction="hide" aria-label="Fermer le menu" autofocus>✕</button>
+
       <h4>Menu</h4>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -30,50 +39,16 @@
         </li>
       </ul>
     </nav>
-    <main>
-    <h1>Chats &amp; chiens</h1>
-    <p>Bienvenue ! Ce petit site sert à s’entraîner aux <strong>liens relatifs</strong> entre fichiers et dossiers.</p>
-    <p>Choisis une rubrique dans le menu : <a href="cats/index.html">les chats</a> ou <a href="dogs/index.html">les chiens</a>.</p>
-    </main>
-  </div>
-  <header class="header header--home"> 
-
-    <!-- Menu principal -->
-    <button class="burger" type="button" popovertarget="menu" aria-label="Menu">
-  🍔
-</button><!--  2: La page ne défile pas tant que le menu popover est ouvert -->
-
-
-    <nav class="menu" id="menu" popover aria-label="Main menu"><!-- 1: Ce bouton ouvre ou ferme le menu grâce à l'attribut popovertarget  -->
-<button
-  class="menu__close burger burger--close"
-  type="button"
-  popovertarget="menu"
-  popovertargetaction="hide"
-  aria-label="Close the menu"
-  autofocus
-></button><!--  3: Ce bouton ferme le menu grâce à l'attribut popovertarget  -->
-
-      <ul class="menu__list">
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu un</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu deux</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu trois</a></li>
-        <li class="menu__item"><a class="menu__link" href="#">Item de menu quatre</a></li>
-      </ul>
-    </nav>
-    <!-- Fin du menu principal -->
   </header>
 
-  <!-- Contenu principal de la page -->
   <main>
-    <h1>Test de menu</h1>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam fugit maiores accusamus quisquam ad veritatis
-      officiis numquam ex rem porro, amet sapiente eaque. Rerum excepturi eaque atque ipsa quos mollitia.
-    </p>
+    <h1>Chats et chiens</h1>
+    <p>Bienvenue ! Ce site sert à pratiquer les liens relatifs entre fichiers.</p>
+    <ul>
+      <li><a href="cats/index.html">Voir les chats</a></li>
+      <li><a href="dogs/index.html">Voir les chiens</a></li>
+    </ul>
   </main>
-  <!-- Fin du contenu principal -->
-
 </body>
 
 </html>
